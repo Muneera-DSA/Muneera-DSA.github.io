@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muneera Mohamed · Data Scientist</title>
+<meta name="description" content="Muneera Mohamed, data scientist with eight years in finance. Forecasting, risk and anomaly-detection models judged by the decisions they support.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muneera Mohamed · Data Scientist">
+<meta property="og:description" content="Muneera Mohamed, data scientist with eight years in finance. Forecasting, risk and anomaly-detection models judged by the decisions they support.">
+<meta property="og:url" content="https://muneera-dsa.github.io/">
+<meta property="og:image" content="https://muneera-dsa.github.io/assets/muneera.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="col">
+    <a class="name" href="index.html">Muneera Mohamed</a>
+    <nav aria-label="Site">
+      <a href="index.html#work">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="qualifications.html">Qualifications</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="intro">
+  <div class="col">
+    <img src="assets/muneera.jpg" alt="Portrait of Muneera Mohamed" width="104" height="104">
+    <h1>Muneera Mohamed</h1>
+    <p>I am a data scientist with eight years in finance. I build forecasting, risk and anomaly-detection models, and I judge each one by the decision it supports: who to treat first, how much stock to hold, when to check an appliance.</p>
+    <p>Finance taught me to start from the cost of being wrong. So I test every model the way it would be used, on patients, homes or periods it has never seen, and against the simple rule it has to beat.</p>
+    <p class="creds">MSc Data Science · CMA (USA) · CA (Professional Education II) · Abu Dhabi</p>
+    <div class="links">
+      <a href="#work">See my projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="https://github.com/Muneera-DSA">GitHub</a>
+      <a href="https://www.linkedin.com/in/muneera-mohamed-7010ba109">LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="col">
+    <h2>Data science and analytics projects</h2>
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/COVID19-Mortality-Risk">COVID-19 mortality risk</a></h3>
+      <p class="meta">Healthcare machine learning · 3.9 million patients, Mexico</p>
+      <p>A model that scores each confirmed patient's 30-day risk of death at first attendance, so a health unit can decide who to monitor closely and who needs a bed. Trained on 2020 and tested once on 2021.</p>
+      <p class="result">ROC-AUC 0.949 on 2.4 million later patients; the 10% it flags first include 78% of deaths, and its risks are calibrated (5.8% predicted, 5.7% observed).</p>
+            <figure class="shot narrow"><a href="https://github.com/Muneera-DSA/COVID19-Mortality-Risk"><img src="assets/projects/covid_calibration.png" alt="Calibration chart: predicted against observed 30-day mortality for 2021 patients, with the model close to the diagonal" width="676" height="598" loading="lazy"></a><figcaption>Predicted risk against observed deaths for 2021 patients the model never saw: the gradient-boosting line sits on the diagonal, so its percentages can be trusted.</figcaption></figure>
+      <p class="tools">Gradient boosting, 15-model screen, temporal and state-held-out validation, calibration, SHAP</p>
+    </article>
+
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/Cardiovascular-Risk-Prediction">Cardiovascular risk against the clinical standard</a></h3>
+      <p class="meta">Clinical analytics and survival analysis · 23,888 US adults</p>
+      <p>A 10-year cardiovascular mortality model built on NHANES linked to the National Death Index, compared with the Pooled Cohort Equations used in clinical guidelines.</p>
+      <p class="result">ROC-AUC 0.822 against 0.799 on a later period, and risk numbers that mean what they say: observed/expected 1.01, where the guideline equations overstate risk about fourfold.</p>
+            <figure class="shot"><a href="https://github.com/Muneera-DSA/Cardiovascular-Risk-Prediction"><img src="assets/projects/cvd_validation.png" alt="Calibration and decision curves comparing the model with the Pooled Cohort Equations" width="1200" height="431" loading="lazy"></a><figcaption>Left: the clinical equations (grey) overstate risk; the model tracks observed deaths. Right: the model gives more net benefit across treatment thresholds.</figcaption></figure>
+      <p class="tools">18-model screen incl. XGBoost and LightGBM, temporal validation, Cox survival model (C-index 0.807), calibration and decision curves, SHAP</p>
+    </article>
+
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/retail-demand-optimization">Retail demand forecasting and inventory</a></h3>
+      <p class="meta">Time series and decision analytics · 2,283 daily and hourly series</p>
+      <p>Forecasts tied to three planning decisions: weekly orders per product and outlet, store replenishment and hourly staffing, each judged on the decision rather than on forecast error alone.</p>
+      <p class="result">10% less stock than the best rule of thumb for the same 95% fill rate, and a staffing plan 7% cheaper than the best rule-based plan.</p>
+            <figure class="shot"><a href="https://github.com/Muneera-DSA/retail-demand-optimization"><img src="assets/projects/retail_stock.png" alt="Bar chart of stock needed for a 95% fill rate by each ordering policy" width="1125" height="487" loading="lazy"></a><figcaption>Stock needed to serve 95% of demand over 8 held-out weeks: the quantile model needs the least, 10% below the best rule of thumb.</figcaption></figure>
+      <p class="tools">Quantile gradient boosting, benchmarked against ARIMA, SARIMA, Holt-Winters, Prophet and Croston/SBA/TSB; time-ordered validation, Diebold-Mariano tests, SHAP</p>
+    </article>
+
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/smart_home_anomaly_detection">Smart-home appliance anomaly detection</a></h3>
+      <p class="meta">IoT sensor data · 129 million readings from 20 UK homes</p>
+      <p>An anomaly detector for how household appliances are functioning, built on smart-plug power sensors and validated on fridges and freezers in homes it never saw.</p>
+      <p class="result">86% of annotated anomalies caught at under one false alert per appliance a month, against 78% for a timer rule, with alerts about 48 minutes earlier.</p>
+            <figure class="shot"><a href="https://github.com/Muneera-DSA/smart_home_anomaly_detection"><img src="assets/projects/smarthome_detectors.png" alt="Bar chart of the share of annotated anomalies caught by each detector in unseen homes" width="1126" height="660" loading="lazy"></a><figcaption>Share of real anomalies caught in homes the model never saw, at about one false alert per appliance a month.</figcaption></figure>
+      <p class="tools">Gradient boosting, Isolation Forest and rule baselines, leave-houses-out validation, event-level scoring, SHAP</p>
+    </article>
+
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/Hotel-Review-Sentiment-Analysis">Hotel review sentiment</a></h3>
+      <p class="meta">NLP and customer analytics · 515,000 reviews</p>
+      <p>A text classifier that flags unhappy guests in free-text reviews, so a guest-relations team knows which to answer first.</p>
+      <p class="result">Reading 7.2% of reviews in the model's order reaches 81% of unhappy guests, on 299 hotels it never saw (PR-AUC 0.849).</p>
+            <figure class="shot"><a href="https://github.com/Muneera-DSA/Hotel-Review-Sentiment-Analysis"><img src="assets/projects/hotel_pr_curve.png" alt="Precision-recall curves for the text classifier and simpler baselines on held-out hotels" width="960" height="660" loading="lazy"></a><figcaption>Precision-recall on 299 held-out hotels: TF-IDF with logistic regression (blue) against simpler baselines and guessing (dashed).</figcaption></figure>
+      <p class="tools">TF-IDF and logistic regression, best of 11 model families, hotel-grouped validation, calibration, SHAP</p>
+    </article>
+
+    <article class="work">
+      <h3><a href="https://github.com/Muneera-DSA/brainguard-mri-tumor-detection">Brain-tumour MRI classification</a></h3>
+      <p class="meta">Deep learning and explainable AI · 3,064 scans, 233 patients</p>
+      <p>A transfer-learning classifier that identifies tumour type from one MRI slice, as a second-reader aid, validated on patients it never saw.</p>
+      <p class="result">90.1% balanced accuracy and 0.983 macro AUC; along the way, an audit showed 54% of a popular benchmark's test images are duplicated in its training set.</p>
+            <figure class="shot"><a href="https://github.com/Muneera-DSA/brainguard-mri-tumor-detection"><img src="assets/projects/brain_explain.png" alt="An MRI slice with the tumour outlined, its SHAP map and its Grad-CAM heat map" width="1080" height="360" loading="lazy"></a><figcaption>One test patient: the tumour outline (green), SHAP evidence and the Grad-CAM heat map, which centres on the tumour.</figcaption></figure>
+      <p class="tools">ResNet50 and five other architectures in TensorFlow/Keras, patient-grouped validation, robustness tests, Grad-CAM and SHAP checked against tumour outlines</p>
+    </article>
+    <p class="next"><a class="next-btn" href="experience.html" aria-label="Next: Experience" title="Experience"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="col">© 2026 Muneera Mohamed</div>
+</footer>
+</body>
+</html>
